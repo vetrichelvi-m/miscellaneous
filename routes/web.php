@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+// use App\Http\Controllers\PagesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,4 +16,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
+});
+
+
+Route::group(['namespace' => 'App\Http\Controllers'], function()
+{
+    Route::get('/', 'PagesController@index')->name('pages.index');
+    Route::get('/about', 'PagesController@about')->name('pages.about');
 });

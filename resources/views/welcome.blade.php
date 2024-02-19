@@ -131,3 +131,5 @@
         </div>
     </body>
 </html>
+
+{{-- composer require phpmailer/phpmailer --}}
